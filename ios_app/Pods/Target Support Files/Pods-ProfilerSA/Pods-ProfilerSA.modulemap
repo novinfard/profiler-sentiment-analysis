@@ -1,0 +1,6 @@
+framework module Pods_ProfilerSA {
+  umbrella header "Pods-ProfilerSA-umbrella.h"
+
+  export *
+  module * { export * }
+}

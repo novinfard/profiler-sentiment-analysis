@@ -1,0 +1,26 @@
+PODS:
+  - p2.OAuth2 (4.0.1)
+  - SwiftyJSON (4.1.0)
+
+DEPENDENCIES:
+  - p2.OAuth2 (from `https://github.com/p2/OAuth2`)
+  - SwiftyJSON (~> 4.0)
+
+EXTERNAL SOURCES:
+  p2.OAuth2:
+    :git: https://github.com/p2/OAuth2
+    :submodules: true
+
+CHECKOUT OPTIONS:
+  p2.OAuth2:
+    :commit: e81b4bc4a3cfc3d11b62aba07241ceeb0684ac07
+    :git: https://github.com/p2/OAuth2
+    :submodules: true
+
+SPEC CHECKSUMS:
+  p2.OAuth2: fdc2effef37793a8f775dd4760bc4c1ea906c956
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+
+PODFILE CHECKSUM: efcd717a26b5937372b0a4cd679c85d933891818
+
+COCOAPODS: 1.4.0
