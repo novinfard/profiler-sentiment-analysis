@@ -7,27 +7,39 @@
 //
 
 import UIKit
-import p2_OAuth2
+import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 	
-	
-	func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-		if "ppoauthapp" == url.scheme || (url.scheme?.hasPrefix("com.googleusercontent.apps"))! {
-			if let vc = window?.rootViewController as? ViewController {
-				vc.oauth2.handleRedirectURL(url)
-				return true
-			}
-		}
-		return false
-	}
-	
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		
+		TWTRTwitter.sharedInstance().start(withConsumerKey:"uaN6UGfiD6FQPc5gjceJYLzjW", consumerSecret:"qKidtkMmOsFZ2AFu3eUEE9yjgj4vYuF8KYWdTDGjVLsKQoVc97")
+		
+		configAppStyle()
 		return true
+	}
+	
+	func configAppStyle() {
+		// MARK: Navigation Bar Customisation
+		
+		// To change background colour.
+		UINavigationBar.appearance().barTintColor = .init(red: 0.95, green: 0.92, blue: 0.87, alpha: 1)
+		
+		// To change colour of tappable items.
+		UINavigationBar.appearance().tintColor = UIColor(red: 0.28, green: 0.32, blue: 0.37, alpha: 1)
+		
+		// To apply textAttributes to title i.e. colour, font etc.
+		UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : UIColor(red: 0.28, green: 0.32, blue: 0.37, alpha: 1)]
+		
+		// To control navigation bar's translucency.
+		UINavigationBar.appearance().isTranslucent = false
+	}
+	
+	func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+		return TWTRTwitter.sharedInstance().application(app, open: url, options: options)
 	}
 
 	func applicationWillResignActive(_ application: UIApplication) {
@@ -52,5 +64,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
 
+}
+
+extension UserDefaults {
+	func imageForKey(key: String) -> UIImage? {
+		var image: UIImage?
+		if let imageData = data(forKey: key) {
+			image = NSKeyedUnarchiver.unarchiveObject(with: imageData) as? UIImage
+		}
+		return image
+	}
+	func setImage(image: UIImage?, forKey key: String) {
+		var imageData: NSData?
+		if let image = image {
+			imageData = NSKeyedArchiver.archivedData(withRootObject: image) as NSData?
+		}
+		set(imageData, forKey: key)
+	}
 }
 

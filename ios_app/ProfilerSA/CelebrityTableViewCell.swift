@@ -10,7 +10,10 @@ import UIKit
 
 class CelebrityTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
+	@IBOutlet weak var celebAvatar: UIImageView!
+	@IBOutlet weak var celebName: UILabel!
+	
+	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }

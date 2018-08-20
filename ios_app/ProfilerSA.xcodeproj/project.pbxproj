@@ -10,8 +10,16 @@
 		6779F54C9573A501A925D108 /* Pods_ProfilerSA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74148842DABC862AFFAFE8A5 /* Pods_ProfilerSA.framework */; };
 		8FFF34300C43E0B848C659E4 /* Pods_ProfilerSATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02421CB112D0A726881B2175 /* Pods_ProfilerSATests.framework */; };
 		CD42AA46211B880E008027BD /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD42AA45211B880E008027BD /* credentials.plist */; };
+		CD7039E8212776A9004E290C /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7039E7212776A9004E290C /* SafariServices.framework */; };
+		CD7039EA21287438004E290C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7039E921287438004E290C /* WelcomeViewController.swift */; };
+		CD7039EC212875F9004E290C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7039EB212875F9004E290C /* HomeViewController.swift */; };
+		CD7039EE2128BF71004E290C /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7039ED2128BF71004E290C /* TextViewController.swift */; };
+		CD7039F02128BF8A004E290C /* CelebrityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7039EF2128BF8A004E290C /* CelebrityViewController.swift */; };
+		CD7039F22128BFB8004E290C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7039F12128BFB8004E290C /* ResultViewController.swift */; };
+		CD7039F42128C009004E290C /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7039F32128C009004E290C /* RequestViewController.swift */; };
+		CD7039F62128DE37004E290C /* CelebrityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7039F52128DE37004E290C /* CelebrityTableViewCell.swift */; };
+		CD7039F82128E2BB004E290C /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7039F72128E2BB004E290C /* Data.swift */; };
 		CDAC0F3821175274004B9CE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC0F3721175274004B9CE3 /* AppDelegate.swift */; };
-		CDAC0F3A21175274004B9CE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC0F3921175274004B9CE3 /* ViewController.swift */; };
 		CDAC0F3D21175274004B9CE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDAC0F3B21175274004B9CE3 /* Main.storyboard */; };
 		CDAC0F3F21175278004B9CE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDAC0F3E21175278004B9CE3 /* Assets.xcassets */; };
 		CDAC0F4221175278004B9CE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDAC0F4021175278004B9CE3 /* LaunchScreen.storyboard */; };
@@ -35,9 +43,17 @@
 		74148842DABC862AFFAFE8A5 /* Pods_ProfilerSA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProfilerSA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A23936897205664C7E85A571 /* Pods-ProfilerSA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProfilerSA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProfilerSA/Pods-ProfilerSA.debug.xcconfig"; sourceTree = "<group>"; };
 		CD42AA45211B880E008027BD /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
+		CD7039E7212776A9004E290C /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		CD7039E921287438004E290C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		CD7039EB212875F9004E290C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CD7039ED2128BF71004E290C /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		CD7039EF2128BF8A004E290C /* CelebrityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrityViewController.swift; sourceTree = "<group>"; };
+		CD7039F12128BFB8004E290C /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		CD7039F32128C009004E290C /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+		CD7039F52128DE37004E290C /* CelebrityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrityTableViewCell.swift; sourceTree = "<group>"; };
+		CD7039F72128E2BB004E290C /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		CDAC0F3421175274004B9CE3 /* ProfilerSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProfilerSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDAC0F3721175274004B9CE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CDAC0F3921175274004B9CE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CDAC0F3C21175274004B9CE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CDAC0F3E21175278004B9CE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDAC0F4121175278004B9CE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD7039E8212776A9004E290C /* SafariServices.framework in Frameworks */,
 				6779F54C9573A501A925D108 /* Pods_ProfilerSA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,7 +120,14 @@
 			isa = PBXGroup;
 			children = (
 				CDAC0F3721175274004B9CE3 /* AppDelegate.swift */,
-				CDAC0F3921175274004B9CE3 /* ViewController.swift */,
+				CD7039E921287438004E290C /* WelcomeViewController.swift */,
+				CD7039EB212875F9004E290C /* HomeViewController.swift */,
+				CD7039F52128DE37004E290C /* CelebrityTableViewCell.swift */,
+				CD7039ED2128BF71004E290C /* TextViewController.swift */,
+				CD7039EF2128BF8A004E290C /* CelebrityViewController.swift */,
+				CD7039F72128E2BB004E290C /* Data.swift */,
+				CD7039F12128BFB8004E290C /* ResultViewController.swift */,
+				CD7039F32128C009004E290C /* RequestViewController.swift */,
 				CDAC0F3B21175274004B9CE3 /* Main.storyboard */,
 				CDAC0F3E21175278004B9CE3 /* Assets.xcassets */,
 				CDAC0F4021175278004B9CE3 /* LaunchScreen.storyboard */,
@@ -125,6 +149,7 @@
 		F5CB87B930E2608F667A5CAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD7039E7212776A9004E290C /* SafariServices.framework */,
 				74148842DABC862AFFAFE8A5 /* Pods_ProfilerSA.framework */,
 				02421CB112D0A726881B2175 /* Pods_ProfilerSATests.framework */,
 			);
@@ -308,11 +333,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ProfilerSA/Pods-ProfilerSA-resources.sh",
-				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -326,13 +351,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ProfilerSA/Pods-ProfilerSA-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/p2.OAuth2/p2_OAuth2.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/p2_OAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -346,8 +377,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDAC0F3A21175274004B9CE3 /* ViewController.swift in Sources */,
+				CD7039EA21287438004E290C /* WelcomeViewController.swift in Sources */,
 				CDAC0F3821175274004B9CE3 /* AppDelegate.swift in Sources */,
+				CD7039F42128C009004E290C /* RequestViewController.swift in Sources */,
+				CD7039EC212875F9004E290C /* HomeViewController.swift in Sources */,
+				CD7039EE2128BF71004E290C /* TextViewController.swift in Sources */,
+				CD7039F62128DE37004E290C /* CelebrityTableViewCell.swift in Sources */,
+				CD7039F02128BF8A004E290C /* CelebrityViewController.swift in Sources */,
+				CD7039F82128E2BB004E290C /* Data.swift in Sources */,
+				CD7039F22128BFB8004E290C /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,7 +553,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.novinfard.ProfilerSA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -531,7 +569,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.novinfard.ProfilerSA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import UIKit
+
+struct Celebrity {
+	let name: String
+	let avatar: UIImage?
+	let extResult: Double
+	let neuResult: Double
+	let agrResult: Double
+	let conResult: Double
+	let opnResult: Double
+}
