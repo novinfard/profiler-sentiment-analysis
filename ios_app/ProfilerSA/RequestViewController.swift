@@ -10,6 +10,7 @@ import UIKit
 import MBProgressHUD
 import Alamofire
 import SwiftyJSON
+import NaturalLanguage
 
 class RequestViewController: UIViewController {
 
@@ -21,7 +22,6 @@ class RequestViewController: UIViewController {
 		self.navigationItem.setHidesBackButton(true, animated:true)
 		
 		if UserDefaults.standard.string(forKey: "predictionType") == "celebrity" {
-//		if UserDefaults.standard.string(forKey: "predictionType") != "" {
 			DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
 				MBProgressHUD.hide(for: self.view, animated: true)
 				self.goToResult()
@@ -40,43 +40,43 @@ class RequestViewController: UIViewController {
 	}
 	
 	func sendPredictionRequest() {
-		let requestedParams = ["text": UserDefaults.standard.string(forKey: "predictionDocument")!]
-		let url = URL(string: "http://localhost:8080")
-		Alamofire.request(url!, method: .post, parameters: requestedParams)
-		Alamofire.request(url!, method: .post, parameters: requestedParams).responseJSON { response in
-			MBProgressHUD.hide(for: self.view, animated: true)
-			// error handling
-			guard case let .failure(error) = response.result else {
-				// successful
-				 print(response)
-				guard let jsonData = response.data else {
-					self.displayError()
-					return
-				}
-				do {
-					let json = try JSON(data: jsonData)
-					print(json)
-					if json["ext"].exists() {
-						UserDefaults.standard.set(json["ext"].double, forKey: "extResult")
-						UserDefaults.standard.set(json["neu"].double, forKey: "neuResult")
-						UserDefaults.standard.set(json["agr"].double, forKey: "agrResult")
-						UserDefaults.standard.set(json["con"].double, forKey: "conResult")
-						UserDefaults.standard.set(json["opn"].double, forKey: "opnResult")
-						
-						self.goToResult()
-					} else {
-						self.displayError()
-					}
-				} catch _ as NSError {
-					self.displayError()
-				}
-				return
-			}
-			if error is AFError {
-				self.displayError()
-			} else if error is URLError {
-				self.displayError()
-			}
+		guard let document = UserDefaults.standard.string(forKey: "predictionDocument") else {
+			return
+		}
+		if let sentimentPredictor = try? NLModel(mlModel: EXT().model),
+			let result = sentimentPredictor.predictedLabel(for: document) {
+			UserDefaults.standard.set(getDoubleResult(from: result), forKey: "extResult")
+		}
+		
+		if let sentimentPredictor = try? NLModel(mlModel: NEU().model),
+			let result = sentimentPredictor.predictedLabel(for: document) {
+			UserDefaults.standard.set(getDoubleResult(from: result), forKey: "neuResult")
+		}
+		
+		if let sentimentPredictor = try? NLModel(mlModel: AGR().model),
+			let result = sentimentPredictor.predictedLabel(for: document) {
+			UserDefaults.standard.set(getDoubleResult(from: result), forKey: "agrResult")
+		}
+		
+		if let sentimentPredictor = try? NLModel(mlModel: CON().model),
+			let result = sentimentPredictor.predictedLabel(for: document) {
+			UserDefaults.standard.set(getDoubleResult(from: result), forKey: "conResult")
+		}
+		
+		if let sentimentPredictor = try? NLModel(mlModel: OPN().model),
+			let result = sentimentPredictor.predictedLabel(for: document) {
+			UserDefaults.standard.set(getDoubleResult(from: result), forKey: "opnResult")
+		}
+		
+		self.goToResult()
+		
+	}
+	
+	private func getDoubleResult(from resultString: String) -> Double {
+		if resultString == "y" {
+			return 1
+		} else {
+			return 0
 		}
 	}
 	
